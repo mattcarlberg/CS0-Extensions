@@ -172,13 +172,13 @@ while(count < 4){
 
 Here's another version of a while loop that works just as well:
 ```javascript
-  let x = 50;
-  let i = 0
-  while(i < 4) {
+ let x = 50;
+ let i = 0
+ while(i < 4) {
     ellipse(x, height/2, 40, 40);
     x += 50;
     i++
-  }
+ }
 ```
 
 
