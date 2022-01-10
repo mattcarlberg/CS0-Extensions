@@ -1,6 +1,16 @@
-### High School Computer Science
+### Computing: Graphics and Games 
 ### Fall 2021 
 ### Class 51
+
+
+# Directions
+
+Read about new ideas, and then try the challenges at the bottom of the page.  This counts as "classwork" so we are grading you on effort.  Try as many of the coding challenges, but you are NOT required to do them all.  Submit a link with any work that you are able to do. 
+
+
+# Attribution
+
+This material is adapted from [Upperline Code](https://github.com/upperlinecode/06-p5.js-readings/blame/master/05a-javascript-objects.md).  They offer good [summer programs](https://www.upperlinecode.com/); they cost money, but there is financial aid available.  
 
 
 # JavaScript Objects
@@ -52,21 +62,21 @@ What if we could group those related variables together into one. A bubble is *o
 
 The way we can do this is with **JavaScript Objects**. An object is *one thing* that can be stored in one variable. An object can have many **properties**, think of these as additional variables stored inside the larger object.
 
-That sounds pretty abstract, but it's not so bad, let's make a an object called `brick`:
+That sounds pretty abstract, but it's not so bad, let's make a an object called `brick` (fyi: in the animation below "var" is effectively the same as "let"):
 
 ![first object](https://s3.amazonaws.com/upperline/curriculum-assets/p5js/object-intro.gif)
 
 Nice, the object we created with this code has two properties, `x` and `y`.
 
 ```javascript
-var brick = {x: 10, y: 100};
+let brick = {x: 10, y: 100};
 ```
 #### Creating Objects
 
 We create objects using curly braces
 
 ```javascript
-var emptyObject = {};
+let emptyObject = {};
 ```
 
 #### Properties, {key: value}
@@ -76,7 +86,7 @@ Properties are added inside of an object. A property has two main parts, a *name
 With objects the name to a property is called a **key**.  You will often hear people refer to properties and their values as *key-value pairs*. The object below has one key-value pair, the key is `firstName` and the value is `"Jenny"`:
 
 ```javascript
-var student = {firstName: "Jenny"};
+let student = {firstName: "Jenny"};
 ```
 
 #### Multiple Properties
@@ -84,20 +94,14 @@ var student = {firstName: "Jenny"};
 When there are multiple properties in an object, they are separated by commas. Often objects will be written across multiple lines. Either way is fine as long as your commas and braces are in the right place.
 
 ```javascript
-var student = {firstName: "Jenny", grade: 11};
+let student = {firstName: "Jenny", grade: 11};
 // or
-var student = {
+let student = {
   firstName: "Jenny",
   grade: 11
 };
 ```
 
-#### \* Your Turn \*
-Make an object that represents you!  You can write it in the text editor, but better would be to open up the chrome console so you can interact with your object.
-
-It should have *at least 5* key-value pairs. Some ideas for the keys might be: name, age, date of birth, grade, favorite food, favorite color, mood, or number of siblings. Some of the vales can also be Boolean values, `true` or `false`, something like`{hasGlasses: true}` or `{tiredToday: false}`.
-
-Read the section below on how to access and change the properties. Change one of the properties on your "me" object.
 
 #### Accessing Properties
 
@@ -118,9 +122,9 @@ You can also use the same *dot* after the object name plus an `=` to add additio
 Here's the same program built with objects. This may not seem like a huge change from before, but we're headed in the right direction.
 
 ```javascript
-var bubbleSize = 40;
+let bubbleSize = 40;
 
-var bubble1;
+let bubble1;
 
 function setup() {
   createCanvas(500,400);
@@ -140,6 +144,8 @@ function draw() {
   bubble1.y += random(-2, 2);
 }
 ```
+
+
 ## Why are Objects Important
 
 Objects are a super important concept in programming and we've just scratched the surface here.
@@ -148,7 +154,8 @@ Objects allow us to group together into one container all the useful data that m
 
 JavaScript objects are fundamental to how data from the internet is structured and retrieved.  If you wanted to make an app that used information about the current weather, movies playing near your zip-code, or just about any data you can imagine that comes from the internet, it is very, very likely that that data will be in the form of a big JavaScript object. With an understanding of objects, you're on your way to becoming an awesome developer.
 
-## Mini-Challenge
+## Coding Challenges - Do As Many As You Can 
+
 1. Add at least one more bubble, make it an object.
 
 2. Add a `size` property to each bubble object. The size can be random or hard-coded in.
@@ -174,5 +181,26 @@ JavaScript objects are fundamental to how data from the internet is structured a
 
   The way you would access the `g` key would be `bubble.colors.g`.  Give it a shot!
 
+
+5.  Try to make lots of bubbles with an array.  Here's a start:
+
+```javascrpt 
+let bubbles = [];
+
+function setup() {
+  createCanvas(500,400);
+  
+  for(let i = 0; i < 10; i++){
+    let new_bubble = {
+      x:random(0, width),
+      y:random(0, height)
+    }
+
+    bubbles.push(new_bubble)
+  }
+}
+```
+
 ## Resources
+
 - Watch Dan Shiffman explain the bubbles in a video over at the [Coding Train](https://www.youtube.com/watch?v=pGkSHeEZLMU&index=23&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA)
