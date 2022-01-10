@@ -7,6 +7,8 @@
 
 Read about new ideas, and then try the challenges at the bottom of the page.  This counts as "classwork" so we are grading you on effort.  Try as many of the coding challenges, but you are NOT required to do them all.  Submit a link with any work that you are able to do. 
 
+We ESPECIALLY encourage you to complete all challenges, if you are planning to take Object-Oriented Programming next semester. 
+
 
 # Attribution
 
